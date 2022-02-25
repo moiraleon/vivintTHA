@@ -48,8 +48,17 @@ h6{
     font-weight: lighter;
 }
 
+h4{
+    color: white;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h3{
     font-weight: lighter;
+}
+h2{
+    text-align: center;
 }
 
 p{
@@ -103,7 +112,29 @@ p{
   max-height: 100%;
 }
 
-#bottom {
+#bottom-container {
   background-color: #7f312b;
   height: 70px;
+    padding: 20px;
+}
+
+.box-div{
+    text-align: center;
+    background-color: white;
+    border-radius: 15%;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+
+.countdown-box{
+    color: black;
+    display: inline;
+}
+
+.label{
+    padding-bottom: 20px;
+}
+
+#count-container{
 }
