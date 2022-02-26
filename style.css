@@ -25,7 +25,6 @@
   margin-right: auto;
 }
 
-/*TODO: color match gradient */
 .row {
   display: flex;
   background-image: linear-gradient(#2d2d2d, #b1b1b1, #060606);
