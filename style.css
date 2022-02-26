@@ -115,15 +115,23 @@ p{
 #bottom-container {
   background-color: #7f312b;
   height: 70px;
-    padding: 20px;
+  padding: 20px;
+  /* text-align: center; */
+  display: flex;
+}
+
+#count-title{
+    margin-right: 15px;
+    margin-left: 30%;
+    
 }
 
 .box-div{
     text-align: center;
     background-color: white;
     border-radius: 15%;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
 }
 
@@ -133,8 +141,5 @@ p{
 }
 
 .label{
-    padding-bottom: 20px;
-}
-
-#count-container{
+    color: #222720;
 }
