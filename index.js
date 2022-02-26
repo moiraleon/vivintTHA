@@ -1,22 +1,23 @@
-var countDownDate = new Date("Mar 15, 2022 15:37:25").getTime();
+const http = require("http");
+const fs = require('fs').promises;
+const host = 'localhost';
+const port = 8000;
 
-var x = setInterval(function() {
-  var now = new Date().getTime();
-    
-  var distance = countDownDate - now;
-    
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-    
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+const requestListener = function (req, res) {
+  fs.readFile(__dirname + "/index.html")
+      .then(contents => {
+          res.setHeader("Content-Type", "text/html");
+          res.writeHead(200);
+          res.end(contents);
+      })
+      .catch(err => {
+          res.writeHead(500);
+          res.end(err);
+          return;
+      });
+};
+
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+});

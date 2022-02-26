@@ -4,14 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Vivint THA</title>
 </head>
 <body>
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  margin: auto;
+  width: 70vw;
+  height: 70vh;
+  padding: 0;
+}
+
+#top {
+  flex: 5;
+  background-color: #222720;
+  padding: 0;
+  height: 60px;
+}
+
+#logo {
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  background-image: linear-gradient(#2d2d2d, #b1b1b1, #060606);
+}
+
+.column {
+  float: left;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#text {
+  flex: 2;
+  max-width: 50%;
+}
+
+h6 {
+  font-size: x-small;
+  font-weight: lighter;
+}
+
+h4 {
+  color: white;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-weight: lighter;
+}
+h2 {
+  text-align: center;
+}
+
+p {
+  display: inline;
+  word-wrap: break-word;
+  font-weight: lighter;
+  font-size: x-small;
+}
+
+#underline-txt {
+  text-decoration: underline;
+}
+
+#left {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#right {
+  flex: 4;
+}
+
+#call-btn {
+  background-color: #35cca2;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 30px;
+}
+
+#call-btn:hover {
+  background-color: #8dd5bb;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#phone-png {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+#vivint-product-img {
+  float: right;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+#bottom-container {
+  background-color: #7f312b;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-div {
+  text-align: center;
+  background-color: white;
+  border-radius: 15%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.countdown-box {
+  color: black;
+  display: inline;
+}
+
+.label {
+  color: #222720;
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+  }
+  #bottom-container {
+    flex-direction: column;
+  }
+  #text {
+    flex-direction: column;
+  }
+}
+
+    </style>
+
+
     
     <div id="container">
         <div id="top">
-            <a href="https://www.vivint.com/"><img src="./public/vivint.png" id="logo" class="pointer"></a>
+            <a href="https://www.vivint.com/"><img src="./public/vivint.png" id="logo" class="pointer" alt="logo-png"></a>
         </div>
 
         <div class="row">
@@ -22,12 +184,12 @@
                 <h3>monitoring + FREE</h3>
                 <h3>Installation*</h3><br>
                 <p>CALL NOW: USE PROMO CODE 4FREE</p><br>
-                <button id="call-btn" class="pointer" onclick="window.open('tel:8775373785');"> <img src="./public/phone-png.png" id="phone-png">877.537.3785</button><br>
+                <button id="call-btn" class="pointer" onclick="window.open('tel:8775373785');"> <img src="./public/phone-png.png" id="phone-png" alt="icon-png">877.537.3785</button><br>
                 <span><p>With qualifying system purchase. </p><p id="underline-txt" class="pointer" onclick="location.href='https://tinyurl.com/mr29aw4y';">Offer details </p></span>
             </div>  
             </div>
             <div class="column" id="right">
-                <img src="./public/viv-prod.png" id="vivint-product-img">
+                <img src="./public/viv-prod.png" id="vivint-product-img" alt="product-png">
             </div>
           </div>
 
@@ -56,6 +218,27 @@
 
     </div>
 
-    <script src="index.js" defer></script>
+    <!-- <script src="index.js" defer></script> -->
+
+    <script>
+        var countDownDate = new Date("Mar 15, 2022 15:37:25").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
+    </script>
 </body>
 </html>
