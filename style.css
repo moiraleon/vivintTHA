@@ -28,7 +28,6 @@
 /*TODO: color match gradient */
 .row {
   display: flex;
-  height: 50vh;
   background-image: linear-gradient(#2d2d2d, #b1b1b1, #060606);
 }
 
@@ -120,20 +119,11 @@ p {
 
 #bottom-container {
   background-color: #7f312b;
-  height: 70px;
-  padding: 20px;
+  padding: 12px;
   display: flex;
-  flex: 5;
-}
-
-#count-title {
-  margin-left: 30%;
-  margin-top: 15px;
-  flex: 2;
-}
-
-#count-container {
-  flex: 3;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .box-div {
