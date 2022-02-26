@@ -4,6 +4,7 @@
 }
 
 #container {
+  /* //display: flex; */
   margin: auto;
   width: 70vw;
   height: 70vh;
@@ -11,6 +12,7 @@
 }
 
 #top {
+  flex: 5;
   background-color: #222720;
   padding: 0;
   height: 60px;
@@ -37,10 +39,8 @@
 }
 
 #text {
-  position: absolute;
-  left: 30%;
-  top: 20%;
-  transform: translateX(-70%);
+  flex: 2;
+  max-width: 50%;
 }
 
 h6 {
@@ -73,17 +73,14 @@ p {
 }
 
 #left {
-  width: 40%;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #right {
-  width: 60%;
-}
-
-@media screen and (max-width: 60vw) {
-  .column {
-    width: 100%;
-  }
+  flex: 4;
 }
 
 #call-btn {
@@ -103,7 +100,7 @@ p {
   background-color: #8dd5bb;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -112,7 +109,6 @@ p {
   width: 15px;
   margin-right: 10px;
 }
-
 
 #vivint-product-img {
   float: right;
@@ -126,14 +122,18 @@ p {
   background-color: #7f312b;
   height: 70px;
   padding: 20px;
-  /* text-align: center; */
   display: flex;
+  flex: 5;
 }
 
 #count-title {
-  margin-right: 15px;
   margin-left: 30%;
   margin-top: 15px;
+  flex: 2;
+}
+
+#count-container {
+  flex: 3;
 }
 
 .box-div {
@@ -152,4 +152,19 @@ p {
 
 .label {
   color: #222720;
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+  }
+  #bottom-container {
+    flex-direction: column;
+  }
+  #text {
+    flex-direction: column;
+  }
 }
