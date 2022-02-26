@@ -1,0 +1,20 @@
+{
+  "name": "vivintthaflex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moiraleon/vivintTHA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moiraleon/vivintTHA/issues"
+  },
+  "homepage": "https://github.com/moiraleon/vivintTHA#readme"
+}
