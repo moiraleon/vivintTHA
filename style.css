@@ -99,15 +99,20 @@ p {
   border-radius: 30px;
 }
 
+#call-btn:hover {
+  background-color: #8dd5bb;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
 #phone-png {
   height: 15px;
   width: 15px;
   margin-right: 10px;
 }
 
-#call-btn:hover {
-  background-color: #8dd5bb;
-}
 
 #vivint-product-img {
   float: right;
